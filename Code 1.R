@@ -1,5 +1,6 @@
 # Installation des packages et chargement des données 
 if (!require("writexl")) install.packages("writexl")
+install.packages(c("tidyverse","rvest","httr"))
 library(rvest)
 library(tidyverse)
 library(httr)
