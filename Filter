@@ -1,0 +1,54 @@
+#Indique comment filtrer les caractéristiques des véhicules (tutoriel) 
+#Commande pour filtrer le prix moyen et l'autonomie d’un véhicule:
+#S’assurer d’avoir installé stringr (fait partie du tidyverse) install.packages("tidyverse")
+#Tesla Model 3
+
+EV2025_2026 %>% 
+    filter(str_detect(Model, "Model 3")) %>% 
+    summarise(mean(Price_USD, na.rm = TRUE))
+<dbl>
+1                          57996.
+
+
+
+EV2025_2026 %>% 
+    filter(str_detect(Model "Model 3")) %>% 
+    summarise(mean(Range_km, na.rm = TRUE))
+<dbl>
+1                          470.
+
+#Hyundai IONIQ 5
+EV2025_2026 %>% 
+filter(str_detect(Model, "IONIQ 5")) %>% 
+ 
+summarise(mean(Price_USD, na.rm = TRUE))
+
+        		<dbl>
+1                          61073.
+
+
+EV2025_2026 %>% 
+filter(str_detect(Model, "IONIQ 5")) %>% 
+ 
+summarise(mean(Range_km, na.rm = TRUE))
+
+		<dbl>
+1                             372. 
+
+# BYD 
+
+EV2025_2026 %>% 
+filter(str_detect(Model, "BYD")) %>% 
+ 
+summarise(mean(Price_USD, na.rm = TRUE))
+
+        		<dbl>
+1                          51 909.
+
+EV2025_2026 %>% 
+filter(str_detect(Model, "BYD")) %>% 
+ 
+summarise(mean(Range_km, na.rm = TRUE))
+
+		<dbl>
+1                            367.
